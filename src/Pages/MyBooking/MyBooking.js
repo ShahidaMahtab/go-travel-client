@@ -19,7 +19,9 @@ const MyBooking = () => {
   const email = user?.email;
   useEffect(() => {
     if (email) {
-      fetch(`http://localhost:5000/bookings?email=${email}`)
+      fetch(
+        `https://possessed-alien-63564.herokuapp.com/bookings?email=${email}`
+      )
         .then((res) => res.json())
         .then((data) => setBookings(data));
     } else {
@@ -28,7 +30,7 @@ const MyBooking = () => {
   }, [email]);
   //deleting
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/bookings/${id}`;
+    const url = `https://possessed-alien-63564.herokuapp.com/bookings/${id}`;
     const proceed = window.confirm(
       "are you sure ? you want to delete the order"
     );
@@ -80,25 +82,20 @@ const MyBooking = () => {
               </tr>
             </thead>
             {bookings?.map((booking) => (
-              <>
-                <tbody key={booking._id}>
-                  <tr>
-                    <td>{booking._id}</td>
-                    <td>{booking.name}</td>
-                    <td>{booking.email}</td>
-                    <td>{booking.destination}</td>
-                    <td>{booking.date}</td>
-                    <td>{booking.phone}</td>
-                    <td>{booking.ticket}</td>
-                    <button
-                      className="border border-0"
-                      onClick={() => handleDelete(booking._id)}
-                    >
-                      <td>{deleteIcon}</td>
-                    </button>
-                  </tr>
-                </tbody>
-              </>
+              <tbody key={booking._id} className="">
+                <tr>
+                  <td>{booking._id}</td>
+                  <td>{booking.name}</td>
+                  <td>{booking.email}</td>
+                  <td>{booking.destination}</td>
+                  <td>{booking.date}</td>
+                  <td>{booking.phone}</td>
+                  <td>{booking.ticket}</td>
+                  <td onClick={() => handleDelete(booking._id)}>
+                    {deleteIcon}
+                  </td>
+                </tr>
+              </tbody>
             ))}
           </Table>
         </Col>

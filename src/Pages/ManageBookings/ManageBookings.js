@@ -12,12 +12,12 @@ const ManageBookings = () => {
   );
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/managebookings")
+    fetch("https://possessed-alien-63564.herokuapp.com/managebookings")
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/bookings/${id}`;
+    const url = `https://possessed-alien-63564.herokuapp.com/bookings/${id}`;
     const proceed = window.confirm(
       "are you sure ? you want to delete the order"
     );
@@ -37,7 +37,7 @@ const ManageBookings = () => {
   };
   //approve
   const handleApprove = (id) => {
-    fetch(`http://localhost:5000/managebookings/${id}`)
+    fetch(`https://possessed-alien-63564.herokuapp.com/${id}`)
       .then((res) => res.json())
       .then((data) => {
         data.status = "approved";

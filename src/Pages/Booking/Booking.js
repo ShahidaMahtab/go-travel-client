@@ -44,7 +44,7 @@ const Booking = () => {
   const [booking, setBooking] = useState({});
   const { bookingid } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${bookingid}`)
+    fetch(`https://possessed-alien-63564.herokuapp.com/services/${bookingid}`)
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, []);
@@ -56,7 +56,7 @@ const Booking = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/bookings", {
+    fetch("https://possessed-alien-63564.herokuapp.com/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",

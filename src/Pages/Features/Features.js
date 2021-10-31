@@ -5,7 +5,7 @@ import Feature from "../Feature/Feature";
 const Features = () => {
   const [features, setFeatures] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/features")
+    fetch("https://possessed-alien-63564.herokuapp.com/features")
       .then((res) => res.json())
       .then((data) => setFeatures(data));
   }, []);

@@ -11,7 +11,7 @@ const AddServices = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/services", {
+    fetch("https://possessed-alien-63564.herokuapp.com/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
