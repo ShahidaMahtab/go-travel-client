@@ -36,7 +36,7 @@ const AddServices = () => {
       <div className="mx-auto form-bg p-3">
         <form onSubmit={handleSubmit(onSubmit)} className="w-25 mx-auto">
           <div className="mb-3">
-            <label for="exampleInputTitle" class="form-label">
+            <label for="exampleInputTitle" className="form-label">
               Title
             </label>
             <input
@@ -49,7 +49,7 @@ const AddServices = () => {
             )}
           </div>
           <div className="mb-3">
-            <label for="exampleInputImage" class="form-label">
+            <label for="exampleInputImage" className="form-label">
               Image
             </label>
             <input
@@ -61,8 +61,8 @@ const AddServices = () => {
               <span className="text-danger">Image is required</span>
             )}
           </div>
-          <div class="mb-3">
-            <label for="exampleInputRating" class="form-label">
+          <div className="mb-3">
+            <label for="exampleInputRating" className="form-label">
               Rating
             </label>
             <input
@@ -75,7 +75,7 @@ const AddServices = () => {
             )}
           </div>
           <div className="mb-3">
-            <label for="exampleInputDescription" class="form-label">
+            <label for="exampleInputDescription" className="form-label">
               Description
             </label>
             <input
@@ -88,7 +88,7 @@ const AddServices = () => {
             )}
           </div>
           <div className="mb-3">
-            <label for="exampleInputPrice" class="form-label">
+            <label for="exampleInputPrice" className="form-label">
               Price
             </label>
             <input
@@ -101,7 +101,7 @@ const AddServices = () => {
             )}
           </div>
           <div className="mb-3">
-            <label for="exampleInputDays" class="form-label">
+            <label for="exampleInputDays" className="form-label">
               Hours/Days
             </label>
             <input
@@ -113,7 +113,7 @@ const AddServices = () => {
               <span className="text-danger">Hours/Days is required</span>
             )}
           </div>
-          <button type="submit" class="btn btn-main">
+          <button type="submit" className="btn btn-main">
             ADD
           </button>
         </form>

@@ -1,4 +1,3 @@
-import Button from "@restart/ui/esm/Button";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Spinner, Table } from "react-bootstrap";
 import useAuth from "../../hooks/useAuth";
@@ -51,39 +50,39 @@ const MyBooking = () => {
   return (
     <Container className="my-5 py-5">
       <Row>
-        <Col xs={12} lg={2}>
-          <Card>
-            <Card.Body>
+        <Col lg={12}>
+          <Card className="mx border border-0">
+            <Card.Body className="mx-auto">
               <p className="text-center">{userIcon}</p>
               <Card.Title className="text-center fw-bold">MyBooking</Card.Title>
-              <Card.Text>
-                <span className="fw-bold">UserName: </span>
-                {user.displayName}
+              <Card.Text className="text-center text-wrap">
+                <span className="fw-bold">{user.displayName}</span>
                 <br />
-                <span className="fw-bold"> Email:</span>
-                {user.email}
+                <span className="fw-bold">{user.email}</span>
               </Card.Text>
-              <Button className="btn btn-main">Check Out!</Button>
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={12} lg={10}>
-          <Table striped bordered hover responsive="xl">
+        <Col lg={12}>
+          <Table striped bordered hover responsive>
             <thead>
               <tr>
-                <th># Booking ID</th>
+                <th>#Booking No.</th>
+                <th>Booking ID</th>
                 <th>UserName</th>
                 <th>Email</th>
                 <th>Destination</th>
                 <th>Date</th>
                 <th>Phone</th>
                 <th>Ticket</th>
+                <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
             {bookings?.map((booking) => (
               <tbody key={booking._id} className="">
                 <tr>
+                  <td>{bookings.indexOf(booking) + 1}</td>
                   <td>{booking._id}</td>
                   <td>{booking.name}</td>
                   <td>{booking.email}</td>
@@ -91,6 +90,7 @@ const MyBooking = () => {
                   <td>{booking.date}</td>
                   <td>{booking.phone}</td>
                   <td>{booking.ticket}</td>
+                  <td>{booking.status}</td>
                   <td onClick={() => handleDelete(booking._id)}>
                     {deleteIcon}
                   </td>

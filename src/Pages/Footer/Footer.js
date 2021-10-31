@@ -27,7 +27,7 @@ const Footer = () => {
     <FontAwesomeIcon icon={faEnvelope} className="text-white" />
   );
   return (
-    <div className="footer-bg ">
+    <div className="footer-bg mt-5 pt-4">
       <Navbar bg="footer-bg" expand="lg">
         <Container>
           <Navbar.Brand href="#home" className="p-lg-4 mt-0">

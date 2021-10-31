@@ -41,40 +41,46 @@ const Login = () => {
       .finally(() => setIsLoading(false));
   };
   return (
-    <Container className="mx-auto w-25 my-5 pt-5">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="border border-1 border-white p-4 shadow"
-      >
-        <h4>Please Sign In</h4>
-        <input type="hidden" defaultValue="pending" {...register("status")} />
-        <div className="mb-3">
-          <label className="form-label">Email</label>
-          <input
-            type="email"
-            {...register("email", { required: true })}
-            className={`form-control ${errors.email ? "is-invalid" : ""}`}
-          />
-          <span className="invalid-feedback">{errors.email?.message}</span>
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+    <Container className="mx-auto my-5 py-5 d-flex justify-content-center align-item-center">
+      <div className="h-100">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="border border-1 border-white p-4 shadow"
+        >
+          <h4>Please Sign In</h4>
+          <input type="hidden" defaultValue="pending" {...register("status")} />
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input
+              type="email"
+              {...register("email", { required: true })}
+              className={`form-control ${errors.email ? "is-invalid" : ""}`}
+            />
+            <span className="invalid-feedback">{errors.email?.message}</span>
+            <div id="emailHelp" className="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Password</label>
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input
+              type="password"
+              {...register("password", { required: true })}
+              className={`form-control ${errors.password ? "is-invalid" : ""}`}
+            />
+            <span className="invalid-feedback">{errors.password?.message}</span>
+          </div>
+          <span className="text-danger">{error}</span>
+          <p>
+            New User? <Link to="/register">Create an Account</Link>
+          </p>
           <input
-            type="password"
-            {...register("password", { required: true })}
-            className={`form-control ${errors.password ? "is-invalid" : ""}`}
+            type="submit"
+            value="signIn"
+            className="mainColor text-white btn"
           />
-          <span className="invalid-feedback">{errors.password?.message}</span>
-        </div>
-        <span className="text-danger">{error}</span>
-        <p>
-          New User? <Link to="/register">Create an Account</Link>
-        </p>
-        <input type="submit" value="signIn" />
-      </form>
+        </form>
+      </div>
     </Container>
   );
 };

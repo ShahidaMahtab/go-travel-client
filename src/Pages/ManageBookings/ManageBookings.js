@@ -15,7 +15,7 @@ const ManageBookings = () => {
     fetch("https://possessed-alien-63564.herokuapp.com/managebookings")
       .then((res) => res.json())
       .then((data) => setBookings(data));
-  }, []);
+  }, [bookings]);
   const handleDelete = (id) => {
     const url = `https://possessed-alien-63564.herokuapp.com/bookings/${id}`;
     const proceed = window.confirm(
@@ -37,14 +37,23 @@ const ManageBookings = () => {
   };
   //approve
   const handleApprove = (id) => {
-    fetch(`https://possessed-alien-63564.herokuapp.com/${id}`)
+    const matchedId = bookings.filter((booking) => booking._id === id);
+    const [data] = matchedId;
+    // console.log(data);
+    //update approve
+    const url = `https://possessed-alien-63564.herokuapp.com/bookings/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
       .then((res) => res.json())
       .then((data) => {
-        data.status = "approved";
-        const changed = data;
-        const remaining = bookings.filter((booking) => booking._id !== id);
-        const newBooking = [changed, ...remaining];
-        setBookings(newBooking);
+        if (data.modifiedCount) {
+          data.status = "approved";
+        }
       });
   };
   return (
@@ -58,7 +67,8 @@ const ManageBookings = () => {
         <Table striped bordered hover responsive="xl">
           <thead>
             <tr>
-              <th>#Booking ID</th>
+              <th>#Booking No.</th>
+              <th>Booking ID</th>
               <th>UserName</th>
               <th>Email</th>
               <th>Destination</th>
@@ -73,6 +83,7 @@ const ManageBookings = () => {
           {bookings?.map((booking) => (
             <tbody key={booking._id}>
               <tr>
+                <td>{bookings.indexOf(booking) + 1}</td>
                 <td>{booking._id}</td>
                 <td>{booking.name}</td>
                 <td>{booking.email}</td>
@@ -93,6 +104,10 @@ const ManageBookings = () => {
           ))}
         </Table>
       </div>
+      <p className="text-end fw-bold">
+        {deleteIcon} : Delete{" "}
+        <span className="ms-3"> {editIcon} : approve status</span>
+      </p>
     </Container>
   );
 };

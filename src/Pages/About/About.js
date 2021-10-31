@@ -9,7 +9,7 @@ const About = () => {
     <FontAwesomeIcon icon={faPhone} className="mainText fs-3 me-2" />
   );
   return (
-    <Container className="pt-5 mt-5 ">
+    <Container className="py-5 my-5 ">
       <p className="mb-1 text-center text-secondary fw-bold">
         <small className="">know more about us</small>
       </p>

@@ -169,20 +169,20 @@ const Booking = () => {
                       {DressCode}
                     </p>
                     <hr />
-                    <p>
-                      <Row>
-                        <Col lg={3}>
-                          <span className="fw-bold me-5">Included</span>
-                        </Col>
-                        <Col lg={6}>
-                          <span>{checkIcon}5 star accomodation</span>
-                          <span>{checkIcon}Airport Transfer</span>
-                          <br />
-                          <span>{checkIcon}Breakfast</span>
-                          <span>{checkIcon}Personal Guide</span>
-                        </Col>
-                      </Row>
-                    </p>
+
+                    <Row>
+                      <Col lg={3}>
+                        <span className="fw-bold me-5">Included</span>
+                      </Col>
+                      <Col lg={6}>
+                        <span>{checkIcon}5 star accomodation</span>
+                        <span>{checkIcon}Airport Transfer</span>
+                        <br />
+                        <span>{checkIcon}Breakfast</span>
+                        <span>{checkIcon}Personal Guide</span>
+                      </Col>
+                    </Row>
+
                     <hr />
                     <p>
                       <span className="fw-bold me-5"> Not Included</span>
@@ -215,7 +215,7 @@ const Booking = () => {
                     </Col>
                     <Col lg={9}>
                       <p className="fw-bold">Rating</p>
-                      <div class="progress mb-3">
+                      <div className="progress mb-3">
                         <div
                           className="progress-bar mainColor "
                           role="progressbar"
@@ -223,7 +223,7 @@ const Booking = () => {
                         ></div>
                       </div>
                       <p className="fw-bold">Comfort</p>
-                      <div class="progress mb-3">
+                      <div className="progress mb-3">
                         <div
                           className="progress-bar mainColor "
                           role="progressbar"
@@ -239,7 +239,7 @@ const Booking = () => {
                         ></div>
                       </div>
                       <p className="fw-bold">Hygiene</p>
-                      <div class="progress mb-3">
+                      <div className="progress mb-3">
                         <div
                           className="progress-bar mainColor "
                           role="progressbar"
@@ -247,7 +247,7 @@ const Booking = () => {
                         ></div>
                       </div>
                       <p className="fw-bold">Reception</p>
-                      <div class="progress mb-3">
+                      <div className="progress mb-3">
                         <div
                           className="progress-bar mainColor "
                           role="progressbar"
@@ -286,7 +286,7 @@ const Booking = () => {
                   defaultValue="pending"
                   {...register("status")}
                 />
-                <div class="mb-3">
+                <div className="mb-3">
                   <label className="fw-bold">Name</label>
                   <input
                     className="form-control"
@@ -299,7 +299,7 @@ const Booking = () => {
                     <span className="text-danger">Name is required</span>
                   )}
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                   <label className="fw-bold">Email</label>
                   <input
                     className="form-control"
@@ -312,7 +312,7 @@ const Booking = () => {
                     <span className="text-danger">Email is required</span>
                   )}
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                   <label className="fw-bold">Address</label>
                   <input
                     className="form-control"
@@ -324,7 +324,7 @@ const Booking = () => {
                     <span className="text-danger">Address is required</span>
                   )}
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                   <label className="fw-bold">Destination</label>
                   <input
                     className="form-control"
@@ -336,7 +336,7 @@ const Booking = () => {
                     <span className="text-danger">Destination is required</span>
                   )}
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                   <label className="fw-bold">Phone</label>
                   <input
                     className="form-control"
@@ -348,7 +348,7 @@ const Booking = () => {
                     <span className="text-danger">Phone is required</span>
                   )}
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                   <label className="fw-bold">Date</label>
                   <input
                     className="form-control"
@@ -360,7 +360,7 @@ const Booking = () => {
                     <span className="text-danger">Date is required</span>
                   )}
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                   <label className="fw-bold">Ticket</label>
                   <input
                     className="form-control"
@@ -373,7 +373,7 @@ const Booking = () => {
                   )}
                 </div>
                 <div className="mb-3 d-flex justify-content-center">
-                  <button type="submit" class="btn btn-main">
+                  <button type="submit" className="btn btn-main">
                     Proceed Booking
                   </button>
                 </div>

@@ -35,12 +35,7 @@ const Header = () => {
               <Nav.Link as={Link} to="/services">
                 <h5 className="mainText">Services</h5>
               </Nav.Link>
-              <Nav.Link as={Link} to="/register">
-                <h5 className="mainText">Register</h5>
-              </Nav.Link>
-              <Nav.Link as={Link} to="/login">
-                <h5 className="mainText">Login</h5>
-              </Nav.Link>
+
               {user.email && (
                 <>
                   <Nav.Link as={Link} to="/mybooking">
@@ -61,6 +56,12 @@ const Header = () => {
                   </NavDropdown>
                 </>
               )}
+              <Nav.Link as={Link} to="/register">
+                <h5 className="mainText">Register</h5>
+              </Nav.Link>
+              <Nav.Link as={Link} to="/login">
+                <h5 className="mainText">Login</h5>
+              </Nav.Link>
               {user.email && (
                 <>
                   <Badge
