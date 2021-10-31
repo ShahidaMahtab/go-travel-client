@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Go Travel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using react [Create React App](https://github.com/facebook/create-react-app).
+
+## Website Details
+* This Project is for the people who are looking for their new adventure.
+* People can choose their destination from our website and we can supply all the requirements like hotel,Date planner, car rentals,guide books any reservations etc.
+* This Projects has basically 4 sections for client and 2 section for admin.
+   Client Side has Features , About, Most Popular Tour,My Booking. Admin sections are Manage All Bookings, adding more services. 
+* In our Features we displayed the features like our support team and value for money why people should choose us.
+* In our Services Section which is our Most Popular Tour , People can choose their desired destination where they can book the services.
+* My Booking section Displays all the users booking.
+* In Our Admin Section Admint can easily add one more services.
+* Finally, in our manage all booking section admin can see all the users and delete or approve any booking.
 
 ## Available Scripts
 
