@@ -1,0 +1,45 @@
+.mainColor {
+  background: #340c48;
+}
+
+.form-bg {
+  background: #d9cde0;
+}
+
+.mainText {
+  color: #340c48
+}
+
+#basic-nav-dropdown {
+  color: #340c48;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-main {
+  background: #340c48;
+  color: aliceblue;
+  border: none;
+  display: block;
+  border-radius: 20px;
+}
+
+.about-bg {
+  background: #f1e1fa;
+}
+
+.star-icon {
+  color: orange;
+}
+
+.footer-bg {
+  background: #100118;
+}
+
+
+@media only screen and (min-width:688px) {
+  .textSize {
+    font-size: 4rem;
+  }
+}
