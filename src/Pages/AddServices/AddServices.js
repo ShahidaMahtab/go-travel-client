@@ -33,8 +33,8 @@ const AddServices = () => {
         titleStart="ADD POPULAR"
         titleEnd="TOUR"
       ></Title>
-      <div className="mx-auto form-bg p-3">
-        <form onSubmit={handleSubmit(onSubmit)} className="w-25 mx-auto">
+      <div className="mx-auto form-bg d-flex justify-content-center align-items-center py-5">
+        <form onSubmit={handleSubmit(onSubmit)} className="mx-auto">
           <div className="mb-3">
             <label for="exampleInputTitle" className="form-label">
               Title

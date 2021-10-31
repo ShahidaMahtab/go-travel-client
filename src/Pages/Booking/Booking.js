@@ -278,7 +278,7 @@ const Booking = () => {
         </Col>
         <Col xs={12} lg={6}>
           <div>
-            <div className="form-bg text-dark text-start  w-50 p-4 mx-auto">
+            <div className="form-bg text-dark text-start display-flex justify-content-center align-items-center p-5 mx-lg-5 mt-5 mt-lg-0">
               <form onSubmit={handleSubmit(onSubmit)} className=" mx-auto">
                 <h3 className="fw-bold mb-3">Book This Tour</h3>
                 <input
