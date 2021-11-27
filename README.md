@@ -6,9 +6,7 @@ This project was created using react [Go Travel](https://go-travel-90b01.web.app
 *  Enable Client to Choose their desired destination to travel.
 *  For authentication, firebase authentication has been used.
 * In our Features we displayed the features like our support team and value for money why people should choose us.
-* In our Services Section which is our Most Popular Tour , People can choose their desired destination where they can book the services.
 * Admin and Client can manage booking using CRUD operation with Mongodb atlas.
-* Finally, in our manage all booking section admin can see all the users and delete or approve any booking.
 
 ## Available Scripts
 
