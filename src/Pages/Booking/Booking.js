@@ -44,9 +44,9 @@ const Booking = () => {
   const [booking, setBooking] = useState({});
   const { bookingid } = useParams();
   useEffect(() => {
-    fetch(`https://possessed-alien-63564.herokuapp.com/services/${bookingid}`)
-      .then((res) => res.json())
-      .then((data) => setBooking(data));
+    fetch(`https://go-travel-server.onrender.com/services/${bookingid}`)
+		.then((res) => res.json())
+		.then((data) => setBooking(data));
   }, []);
   //useform
   const {
@@ -56,20 +56,20 @@ const Booking = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("https://possessed-alien-63564.herokuapp.com/bookings", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          alert("booking successful");
-          reset();
-        }
-      });
+    fetch('https://go-travel-server.onrender.com/bookings', {
+		method: 'POST',
+		headers: {
+			'content-type': 'application/json',
+		},
+		body: JSON.stringify(data),
+	})
+		.then((res) => res.json())
+		.then((data) => {
+			if (data.insertedId) {
+				alert('booking successful');
+				reset();
+			}
+		});
   };
   const {
     title,

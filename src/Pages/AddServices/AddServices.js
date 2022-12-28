@@ -11,20 +11,20 @@ const AddServices = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("https://possessed-alien-63564.herokuapp.com/services", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          alert("services added successfully");
-          reset();
-        }
-      });
+    fetch('https://go-travel-server.onrender.com/services', {
+		method: 'POST',
+		headers: {
+			'content-type': 'application/json',
+		},
+		body: JSON.stringify(data),
+	})
+		.then((res) => res.json())
+		.then((data) => {
+			if (data.insertedId) {
+				alert('services added successfully');
+				reset();
+			}
+		});
   };
   return (
     <Container className="pt-5 my-5 mx-auto">

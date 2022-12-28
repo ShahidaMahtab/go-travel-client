@@ -18,18 +18,16 @@ const MyBooking = () => {
   const email = user?.email;
   useEffect(() => {
     if (email) {
-      fetch(
-        `https://possessed-alien-63564.herokuapp.com/bookings?email=${email}`
-      )
-        .then((res) => res.json())
-        .then((data) => setBookings(data));
+      fetch(`https://go-travel-server.onrender.com/bookings?email=${email}`)
+			.then((res) => res.json())
+			.then((data) => setBookings(data));
     } else {
       <Spinner animation="border" variant="success" className="p-5 my-5" />;
     }
   }, [email]);
   //deleting
   const handleDelete = (id) => {
-    const url = `https://possessed-alien-63564.herokuapp.com/bookings/${id}`;
+    const url = `https://go-travel-server.onrender.com/bookings/${id}`;
     const proceed = window.confirm(
       "are you sure ? you want to delete the order"
     );
@@ -53,13 +51,9 @@ const MyBooking = () => {
         <Col lg={12}>
           <Card className="mx border border-0">
             <Card.Body className="mx-auto">
-              <p className="text-center">{userIcon}</p>
-              <Card.Title className="text-center fw-bold">MyBooking</Card.Title>
-              <Card.Text className="text-center text-wrap">
-                <span className="fw-bold">{user.displayName}</span>
-                <br />
-                <span className="fw-bold">{user.email}</span>
-              </Card.Text>
+              <Card.Title className="text-center fw-bold fs-3 pt-5">
+                My Booking
+              </Card.Title>
             </Card.Body>
           </Card>
         </Col>

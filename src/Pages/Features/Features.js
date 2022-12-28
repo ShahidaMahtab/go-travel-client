@@ -6,9 +6,9 @@ import Title from "../Title/Title";
 const Features = () => {
   const [features, setFeatures] = useState([]);
   useEffect(() => {
-    fetch("https://possessed-alien-63564.herokuapp.com/features")
-      .then((res) => res.json())
-      .then((data) => setFeatures(data));
+    fetch('https://go-travel-server.onrender.com/features')
+		.then((res) => res.json())
+		.then((data) => setFeatures(data));
   }, []);
   return (
     <Container className="mt-5 pt-5">

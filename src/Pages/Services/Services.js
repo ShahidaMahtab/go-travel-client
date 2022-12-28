@@ -5,9 +5,9 @@ import Service from "../Service/Service";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("https://possessed-alien-63564.herokuapp.com/services")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
+    fetch('https://go-travel-server.onrender.com/services')
+		.then((res) => res.json())
+		.then((data) => setServices(data));
   }, []);
   return (
     <Container className="pt-5 my-5 mx-auto">
